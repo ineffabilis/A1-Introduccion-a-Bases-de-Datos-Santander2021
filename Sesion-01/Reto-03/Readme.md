@@ -15,7 +15,9 @@
 ### 3. Desarrollo :rocket:
 
 Usando la base de datos `tienda`, escribe una consulta que permita obtener el top 5 de puestos por salarios.
-
+```mysql
+SELECT * FROM puesto ORDER BY salario DESC LIMIT 5;
+```
 <br/>
 
 [`Anterior`](../Ejemplo-04/Readme.md) | [`Siguiente`](../Readme.md)
