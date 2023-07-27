@@ -17,8 +17,17 @@
 Usando la base de datos `tienda`, escribe consultas que permitan responder las siguientes preguntas.
 
 - ¿Qué artículos incluyen la palabra `Pasta` en su nombre?
+```mysql
+SELECT * FROM articulo WHERE nombre LIKE '%pasta%'
+```
 - ¿Qué artículos incluyen la palabra `Cannelloni` en su nombre?
+```mysql
+SELECT * FROM articulo WHERE nombre LIKE '%Cannelloni%'
+```
 - ¿Qué nombres están separados por un guión (`-`) por ejemplo `Puree - Kiwi`?
+```mysql
+SELECT * FROM articulo WHERE nombre LIKE '%-%'
+```
 
 <br/>
 
