@@ -19,6 +19,29 @@
 
 1. Crear la tabla ratings (recuerda usar el mismo nombre del archivo sin la extensión para vincular nombres de tablas con archivos)
 
+```mysql
+CREATE TABLE IF NOT EXISTS users (
+   user_id INT PRIMARY KEY,
+   gender VARCHAR(13),
+   age INT,
+   occupation INT,
+   zip_code VARCHAR(20)
+);
+CREATE TABLE IF NOT EXISTS movies (
+   movie_id INT PRIMARY KEY,
+   title VARCHAR(200),
+   genres VARCHAR(100)
+);
+CREATE TABLE IF NOT EXISTS ratings (
+   rating_id INT PRIMARY KEY,
+   user_id INT,
+   movie_id INT,
+   rating FLOAT,
+   timestamp INT,
+   FOREIGN KEY (user_id) REFERENCES users(user_id),
+   FOREIGN KEY (movie_id) REFERENCES movies(movie_id)
+);
+```
 ---
 
 > **Nota:** *Observa que la tabla `ratings` requiere llaves foráneas. Revisa esta referencia o pregunta a tu experta(o): https://www.w3schools.com/sql/sql_foreignkey.asp*
